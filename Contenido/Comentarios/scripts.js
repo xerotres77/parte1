@@ -1,19 +1,34 @@
+function enviarComentario() {
 
-/*
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
- */
-/*
-var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
+    var nombre = document.getElementById("nombre").value;
+    var apellido = document.getElementById("apellido").value;
+    var correo = document.getElementById("correo").value;
+    var comentario = document.getElementById("comentario").value;
 
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://restaurante-4.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
+    var formData = new FormData();
+    formData.append('nombre', nombre);
+    formData.append('apellido', apellido);
+    formData.append('correo', correo);
+    formData.append('comentario', comentario);
 
+    fetch('https://formspree.io/f/mzbnoopy', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Hubo un problema al enviar el formulario.');
+        }
+        alert('¡Gracias por tu comentario!');
+        document.getElementById("nombre").value = "";
+        document.getElementById("apellido").value = "";
+        document.getElementById("correo").value = "";
+        document.getElementById("comentario").value = "";
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
