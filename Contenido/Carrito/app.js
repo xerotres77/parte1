@@ -229,26 +229,6 @@ const productos = [
     { nombre: 'Maracuya 1Lt', precio: '$30', img: 'img/Extras/m2.png' }
 ];
 
-// Generar los elementos del producto
-function mostrarProductos() {
-    var contenedorProductos = document.getElementsByClassName('contenedor-items')[0];
-    productos.forEach(producto => {
-        var item = document.createElement('div');
-        item.classList.add('item');
-        item.innerHTML = `
-            <img src="${producto.img}" alt="" class="img-item">
-            <h3 class="titulo-item">${producto.nombre}</h3>
-            <span class="precio-item">${producto.precio}</span>
-            <button class="boton-item">Agregar al carrito</button>
-        `;
-        contenedorProductos.appendChild(item);
-    });
-}
-
-// Llamar a la función para mostrar los productos al cargar la página
-mostrarProductos();
-
-// Filtrar productos
 function filtrarProductos() {
     const busqueda = document.getElementById('busqueda').value.toLowerCase();
     const lista = document.getElementById('listaFiltrada');
