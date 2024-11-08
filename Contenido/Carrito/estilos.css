@@ -9,17 +9,17 @@
 
 /* Ajustes de header */
 header {
-    background: url('img/header.jpg');
+    background: url('img/header.jpg') no-repeat center center;
     background-size: cover;
-    background-position: center;
-    height: 70vh; /* Altura para pantallas grandes */
+    height: 60vh; /* Altura para pantallas grandes */
     position: relative;
 }
 
 @media screen and (max-width: 500px) {
     header {
-        height: 200px; /* Altura fija para dispositivos móviles */
+        height: 150px; /* Altura fija más pequeña para dispositivos móviles */
         background-size: cover;
+        background-position: center;
     }
 }
 
@@ -32,12 +32,12 @@ header a {
 
 header h1 {
     text-align: center;
-    font-size: 35px;
+    font-size: 28px;
     color: #fff;
-    padding: 30px 0;
-    line-height: 300px; /* Alineación vertical */
+    padding: 15px 0;
 }
 
+/* Contenedor principal */
 .contenedor {
     max-width: 1200px;
     padding: 10px;
@@ -57,6 +57,7 @@ header h1 {
     transition: .3s;
 }
 
+/* Estilos de los items */
 .contenedor .contenedor-items .item {
     max-width: 200px;
     margin: auto;
