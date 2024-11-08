@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 
 * {
@@ -11,15 +12,18 @@
 header {
     background: url('img/header.jpg') no-repeat center center;
     background-size: cover;
-    background-position: center;
-    height: 70vh; /* Altura para pantallas grandes */
+    height: 60vh; /* Altura para pantallas grandes */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 500px) {
     header {
-        height: 40vh; /* Altura ajustada para pantallas móviles */
+        height: 150px; /* Altura fija más pequeña para dispositivos móviles */
         background-size: cover;
+        background-position: center;
     }
 }
 
@@ -35,6 +39,13 @@ header h1 {
     font-size: 28px;
     color: #fff;
     padding: 15px 0;
+    /* Centramos el texto en el header */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 /* Contenedor principal */
@@ -47,6 +58,7 @@ header h1 {
     contain: paint;
 }
 
+/* Estilos de los items */
 .contenedor .contenedor-items {
     margin-top: 30px;
     display: grid;
@@ -57,7 +69,6 @@ header h1 {
     transition: .3s;
 }
 
-/* Estilos de los items */
 .contenedor .contenedor-items .item {
     max-width: 200px;
     margin: auto;
@@ -243,4 +254,5 @@ header h1 {
         width: 100%;
     }
 }
+
 
