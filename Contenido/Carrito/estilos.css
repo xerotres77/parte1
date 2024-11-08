@@ -256,9 +256,9 @@ header h1 {
     .contenedor-items {
         width: 100% !important;
     }
-    .carrito {
-        width
-
-
+    .carrito{
+        width: 100%;
+    }
+}
 
 
