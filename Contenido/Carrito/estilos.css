@@ -11,15 +11,15 @@
 header {
     background: url('img/header.jpg') no-repeat center center;
     background-size: cover;
-    height: 60vh; /* Altura para pantallas grandes */
+    background-position: center;
+    height: 70vh; /* Altura para pantallas grandes */
     position: relative;
 }
 
 @media screen and (max-width: 500px) {
     header {
-        height: 200px; /* Altura fija más pequeña para dispositivos móviles */
+        height: 40vh; /* Altura ajustada para pantallas móviles */
         background-size: cover;
-        background-position: center;
     }
 }
 
