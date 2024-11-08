@@ -36,16 +36,22 @@ header a {
 
 header h1 {
     text-align: center;
-    font-size: 28px;
+    font-size: 2.5em;
     color: #fff;
-    padding: 15px 0;
+    font-weight: bold;
     /* Centramos el texto en el header */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5em;
-    font-weight: bold;
+}
+
+/* Ajuste del título para dispositivos móviles */
+@media screen and (max-width: 500px) {
+    header h1 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente en móviles */
+        padding: 10px; /* Ajusta el espaciado si es necesario */
+    }
 }
 
 /* Contenedor principal */
@@ -58,7 +64,6 @@ header h1 {
     contain: paint;
 }
 
-/* Estilos de los items */
 .contenedor .contenedor-items {
     margin-top: 30px;
     display: grid;
@@ -69,6 +74,7 @@ header h1 {
     transition: .3s;
 }
 
+/* Estilos de los items */
 .contenedor .contenedor-items .item {
     max-width: 200px;
     margin: auto;
@@ -251,9 +257,8 @@ header h1 {
         width: 100% !important;
     }
     .carrito {
-        width: 100%;
-    }
-}
+        width
+
 
 
 
