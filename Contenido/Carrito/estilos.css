@@ -11,8 +11,14 @@ header {
     background: url('img/header.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 70vh; /* Altura para pantallas grandes */
     position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 40vh; /* Altura ajustada para pantallas móviles */
+    }
 }
 
 header a {
