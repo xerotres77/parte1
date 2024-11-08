@@ -17,7 +17,7 @@ header {
 
 @media screen and (max-width: 500px) {
     header {
-        height: 150px; /* Altura fija más pequeña para dispositivos móviles */
+        height: 200px; /* Altura fija más pequeña para dispositivos móviles */
         background-size: cover;
         background-position: center;
     }
